@@ -1,0 +1,17 @@
+/**
+ * Collection of re-usable mixins for the project
+ */
+
+// Media min
+@mixin mq_min($screen) {
+  @media screen and (min-width: $screen) {
+    @content;
+  } // $screen
+}
+
+// Media max
+@mixin mq_max($screen) {
+  @media screen and (max-width: $screen) {
+    @content;
+  } // $screen
+}

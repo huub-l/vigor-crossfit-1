@@ -1,0 +1,22 @@
+/**
+ * Collection of re-usable functions for the project
+ */
+
+/**  Strip units */
+@function strip-unit( $number ) {
+  @if type-of( $number ) == "number" and not unitless( $number ) {
+    @return $number / ( $number * 0 + 1 );
+  }
+
+  @return $number;
+}
+
+/** Convert px to rem */
+@function px2rem( $pixel-value, $base-font-size: $base-font-size ) {
+  @return 1 / strip-unit( $base-font-size ) * strip-unit( $pixel-value ) * 1rem;
+}
+
+/** line-height: baseline-height * font-size */
+@function calcLineHeight( $font-size ) {
+  @return ( strip-unit($font-size) * $base-line-height ) * 1rem;
+}

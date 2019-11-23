@@ -130,3 +130,10 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+/**
+ * Create global options page if ACF Pro is activated
+ */
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page('Global Options');
+}
