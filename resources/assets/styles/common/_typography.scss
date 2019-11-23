@@ -56,7 +56,6 @@ h4 {
 }
 
 h5 { font-size: 2.2rem; }
-a { font-family: $font-bold; }
 
 div,
 ul,
@@ -88,4 +87,15 @@ span,
 strong,
 a {
   margin-bottom: 1.6rem;
+}
+
+a {
+  color: theme-color("yellow");
+  font-family: $font-bold;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: darken(theme-color("yellow"), 5%);
+    transition: all 0.3s ease;
+  }
 }

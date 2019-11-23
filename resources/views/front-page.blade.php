@@ -17,4 +17,8 @@
   <button class="btn btn-secondary">
     <span class="text">Button Secondary</span>
   </button>
+  
+  <button class="btn btn-secondary -light">
+    <span class="text">Button Secondary</span>
+  </button>
 @endsection

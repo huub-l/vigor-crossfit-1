@@ -7,6 +7,7 @@ button,
   border-radius: 0;
   padding-right: 6.6rem;
   padding-left: 6.6rem;
+  margin-bottom: 1.6rem;
   font-family: $font-bold;
   font-size: 1.6rem;
   transform: translateY(0) skewX(-10deg);
@@ -29,5 +30,44 @@ button,
   &:active {
     transform: translateY(4%) skewX(-10deg);
     transition: all 0.3s ease;
+  }
+
+  &:focus { box-shadow: none; }
+}
+
+.btn.btn-primary {
+  color: theme-color("black");
+  border-color: theme-color("yellow");
+  background-color: theme-color("yellow");
+
+  &:hover,
+  &:not(:disabled):not(.disabled):active {
+    color: darken(theme-color("black"), 2%);
+    border-color: darken(theme-color("yellow"), 2%);
+    background-color: darken(theme-color("yellow"), 2%);
+  }
+}
+
+.btn.btn-secondary {
+  color: theme-color("yellow");
+  border-color: theme-color("yellow");
+  background-color: transparent;
+
+  &:hover,
+  &:not(:disabled):not(.disabled):active {
+    color: darken(theme-color("yellow"), 2%);
+    border-color: darken(theme-color("yellow"), 2%);
+    background-color: transparent;
+  }
+
+  &.-light {
+    color: theme-color("black");
+    border-color: theme-color("white");
+
+    &:hover,
+    &:not(:disabled):not(.disabled):active {
+      color: lighten(theme-color("black"), 2%);
+      border-color: darken(theme-color("white"), 2%);
+    }
   }
 }
