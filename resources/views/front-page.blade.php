@@ -9,4 +9,12 @@
   <h6>H6 - SemiBold - 20px</h6>
 
   <p>Mauris imperdiet lorem ac sem condimentum mattis. Nulla finibus iaculis sem a interdum. Integer scelerisque ligula sit amet nunc porttitor tincidunt. Curabitur tempor massa laoreet felis varius posuere. Aliquam vestibulum sodales erat vitae mattis. Nam tristique posuere erat, sed suscipit arcu elementum id. Integer aliquam diam metus, sed elementum augue convallis vel.</p>
+
+  <button class="btn btn-primary">
+    <span class="text">Button Primary</span>
+  </button>
+
+  <button class="btn btn-secondary">
+    <span class="text">Button Secondary</span>
+  </button>
 @endsection

@@ -17,6 +17,6 @@
 }
 
 /** line-height: baseline-height * font-size */
-@function calcLineHeight( $font-size ) {
+@function calc-line-height( $font-size ) {
   @return ( strip-unit($font-size) * $base-line-height ) * 1rem;
 }
