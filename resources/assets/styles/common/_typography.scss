@@ -1,0 +1,60 @@
+/**
+ * Typography
+ *
+ * For setting base font styles
+ */
+
+h1,
+h2 {
+  font-family: $font-bold-italic, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-semibold, sans-serif;
+  font-weight: 600;
+}
+
+div,
+ul,
+p,
+li,
+b,
+em,
+span {
+  font-family: $font-regular;
+  font-weight: 400;
+}
+
+strong {
+  font-family: $font-medium;
+  font-weight: 500;
+}
+
+h1 { font-size: 11.1rem; }
+h2 { font-size: 5.9rem; }
+h3 { font-size: 2.6rem; }
+h4 { font-size: 2.4rem; }
+h5 { font-size: 2.2rem; }
+
+div,
+ul,
+p,
+li,
+b,
+em,
+span,
+strong,
+h6,
+a {
+  font-size: 2rem;
+}
+
+button,
+a {
+  font-family: $font-bold;
+}

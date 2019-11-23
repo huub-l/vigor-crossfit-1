@@ -1,10 +1,13 @@
 /**
  * Globals
  *
- * For importing variables, functions, and mixins that
- * can be re-used throughout the project.
+ * For importing variables, functions, mixins, and defaults that
+ * can are always used throughout the project.
  */
 
+@import "fonts";
 @import "variables";
 @import "functions";
 @import "mixins";
+@import "defaults";
+@import "typography";

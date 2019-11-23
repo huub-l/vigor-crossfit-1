@@ -2,13 +2,21 @@
 @import "~bootstrap/scss/functions";
 
 $theme-colors: (
-  primary: #525ddc
+  "yellow": #ffd100,
+  "white" : #fff,
+  "black" : #000,
+  "grey"  : #808080
 );
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
 
-/** Base fonts for the project. Using 10 for easy px to rem conversion */
 $base-font-size: 10;
 $base-line-height: 1.5;
+
+$font-bold: "IBMPlexSans-Bold";
+$font-bold-italic: "IBMPlexSans-BoldItalic";
+$font-semibold: "IBMPlexSans-SemiBold";
+$font-medium: "IBMPlexSans-Medium";
+$font-regular: "IBMPlexSans-regular";
