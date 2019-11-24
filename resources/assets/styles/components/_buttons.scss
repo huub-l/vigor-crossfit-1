@@ -4,9 +4,11 @@
 
 button,
 .btn {
+  display: flex;
+  justify-content: center;
   border-radius: 0;
-  padding-right: 6.6rem;
-  padding-left: 6.6rem;
+  max-width: 32rem;
+  padding: 0.8rem 1.6rem;
   margin-bottom: 1.6rem;
   font-family: $font-bold;
   font-size: 1.6rem;
@@ -15,7 +17,9 @@ button,
   transition: all 0.3s ease;
 
   .text {
+    width: 100%;
     display: inline-block;
+    text-align: center;
     margin: 0;
     font-family: inherit;
     font-size: inherit;

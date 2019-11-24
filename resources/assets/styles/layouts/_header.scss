@@ -1,7 +1,15 @@
-.banner .nav li {
-  @extend .nav-item;
-}
+/**
+ * Header
+ */
 
-.banner .nav a {
-  @extend .nav-link;
+.main-header {
+  display: none;
+
+  .nav li {
+    @extend .nav-item;
+  }
+
+  .nav a {
+    @extend .nav-link;
+  }
 }
