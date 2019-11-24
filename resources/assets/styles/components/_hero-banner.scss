@@ -7,7 +7,7 @@
 
   position: relative;
   height: 100vh;
-  min-height: 72rem;
+  min-height: 80rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,8 +77,4 @@
       }
     }
   } // .cta
-
-  @include mq_min(992px) {
-    min-height: 80rem;
-  }
 }

@@ -2,10 +2,11 @@
 @import "~bootstrap/scss/functions";
 
 $theme-colors: (
-  "yellow": #ffd100,
-  "white" : #fff,
-  "black" : #000,
-  "grey"  : #808080
+  "yellow"      : #ffd100,
+  "light-yellow": #ffe77a,
+  "white"       : #fff,
+  "black"       : #000,
+  "grey"        : #808080
 );
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */

@@ -3,13 +3,66 @@
  */
 
 .main-header {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 10rem;
+  z-index: 20;
+  background-color: rgba(theme-color("black"), 0.1);
+
+  .col-12 { position: static; }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .branding { margin-bottom: 0; }
+  .burger-btn-container { align-self: center; }
+
+  .nav-primary {
+    display: block;
+    position: absolute;
+    top: 10rem;
+    right: 0;
+    width: 100vw;
+    height: (100vh - 10);
+    overflow-y: auto;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    background-color: theme-color("yellow");
+    transition: right 0.4s ease;
+
+    &.-is-hidden {
+      right: -100%;
+      transition: right 0.4s ease;
+    }
+  }
 
   .nav li {
     @extend .nav-item;
+
+    width: 80%;
+    border-bottom: 1px solid theme-color("light-yellow");
+    padding-bottom: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .nav a {
     @extend .nav-link;
+
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: theme-color("black");
   }
 }
