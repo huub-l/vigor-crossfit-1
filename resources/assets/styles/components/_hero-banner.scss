@@ -3,6 +3,8 @@
  */
 
 .hero-banner {
+  @include bg_default;
+
   position: relative;
   height: 100vh;
   min-height: 72rem;
@@ -74,5 +76,9 @@
         margin-bottom: 0;
       }
     }
+  } // .cta
+
+  @include mq_min(992px) {
+    min-height: 80rem;
   }
 }

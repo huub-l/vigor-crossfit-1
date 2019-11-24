@@ -6,7 +6,11 @@ use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
-
+    /**
+     * Hero banner data
+     *
+     * @return array
+     */
     public static function hero_banner()
     {
         $acf_prefix = 'home_banner';
@@ -20,5 +24,21 @@ class FrontPage extends Controller
         ];
 
         return $banner;
+    }
+
+    /**
+     * Why vigor section content
+     * 
+     * @return array
+     */
+    public static function why_vigor()
+    {
+        $content = [
+            'section_class' => 'why-vigor',
+            'title'         => get_field('why_vigor_title'),
+            'excerpt'       => get_field('why_vigor_excerpt')
+        ];
+
+        return $content;
     }
 }

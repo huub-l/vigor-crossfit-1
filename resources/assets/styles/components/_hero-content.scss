@@ -1,0 +1,13 @@
+/**
+ * Hero Content
+ */
+
+.hero-content {
+  padding-top: 8.8rem;
+  padding-bottom: 8.8rem;
+
+  @include mq_min(992px) {
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+  }
+}
