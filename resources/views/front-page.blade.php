@@ -7,4 +7,7 @@
   {{-- Why Vigor --}}
   @include('partials.hero-section', ['content' => FrontPage::why_vigor()])
 
+  {{-- Featured Coaches --}}
+  @include('partials.slider', ['content' => FrontPage::featured_coaches()])
+
 @endsection

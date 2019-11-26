@@ -1,0 +1,78 @@
+/**
+ * Sliders
+ */
+
+.slider-section {
+  position: relative;
+  min-height: 64rem;
+
+  .title,
+  .name,
+  .excerpt,
+  .info {
+    color: theme-color("white");
+  }
+
+  .title { margin-bottom: 2.6rem; }
+
+  .sliders {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    min-height: inherit;
+  }
+
+  .slider {
+    @include bg-default;
+
+    min-height: 64rem;
+    padding-bottom: 8rem;
+
+    .content {
+      min-height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .name {
+      font-family: $font-bold;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .intro {
+    position: relative;
+    z-index: 2;
+    padding-top: 4.4rem;
+  }
+
+  .cta {
+    position: absolute;
+    bottom: -2.4rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    .link {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .slick-dots {
+    bottom: 1.8rem;
+
+    li button::before {
+      font-size: 1rem;
+      color: #fff;
+    }
+  }
+
+  @include mq_min(992px) {
+    min-height: 72rem;
+
+    .slider { min-height: 72rem; }
+  }
+}
