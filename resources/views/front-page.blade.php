@@ -10,4 +10,9 @@
   {{-- Featured Coaches --}}
   @include('partials.slider', ['content' => FrontPage::featured_coaches()])
 
+  {{-- Price List --}}
+  @include('partials.price-list', ['content' => FrontPage::pricing()])
+
+  {{-- Locations --}}
+  @include('partials.locations', ['content' => FrontPage::locations()])
 @endsection

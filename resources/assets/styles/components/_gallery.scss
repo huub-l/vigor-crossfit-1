@@ -1,0 +1,43 @@
+/**
+ * Gallery
+ */
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.4rem;
+
+  .gallery-link {
+    position: relative;
+    width: 23%;
+    height: auto;
+    margin-bottom: 0;
+
+    .gallery-thumb { margin-bottom: 0; }
+
+    .count {
+      display: none;
+      position: absolute;
+      top: 23%;
+      left: 22%;
+      margin-bottom: 0;
+      font-size: 1.4rem;
+      font-family: $font-bold;
+      font-weight: bold;
+      color: theme-color("white");
+    }
+
+    &.-hidden {
+      display: none;
+    }
+  }
+
+  @include mq_min(768px) {
+    .gallery-link {
+      width: 8rem;
+      height: 8rem;
+
+      .count { display: block; }
+    }
+  }
+}

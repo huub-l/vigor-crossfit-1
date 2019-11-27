@@ -13,11 +13,16 @@ use Roots\Sage\Template\BladeProvider;
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('slick.theme.css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css', false, null);
     wp_enqueue_style('slick.css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', false, null);
+    wp_enqueue_style('lightbox.css', get_template_directory_uri() . '/assets/vendor/lightbox/dist/css/lightbox.min.css', false, null);
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
 
     wp_enqueue_script('slick.js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', ['jquery'], null, true);
+    wp_enqueue_script('lightbox.js', get_template_directory_uri() . '/assets/vendor/lightbox/dist/js/lightbox.min.js', ['jquery'], null, true);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
+    // Maps
+    wp_enqueue_script('google-maps.js', "https://maps.googleapis.com/maps/api/js?key=AIzaSyD6iqVcgISqUUcZ1fg37IIu95zRXYQ1UBU", [], null, true);
+    
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }

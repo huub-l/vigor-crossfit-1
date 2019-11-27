@@ -70,9 +70,6 @@ class FrontPage extends Controller
             array_push($featured_coaches_section['slider_items'], $coach);
         }
 
-        // echo'<pre>'; print_r($featured_coaches_section['slider_items']); echo'</pre>';
-        // exit;
-
         return $featured_coaches_section;
     }
 
@@ -88,7 +85,43 @@ class FrontPage extends Controller
             'title'         => get_field('pricing_section_title'),
             'options'       => get_field('pricing_list')
         ];
-
+        
         return $pricing_section;
+    }
+
+    /**
+     * Locations section
+     *
+     * @return array
+     */
+    public static function locations()
+    {
+        $section_data = [
+            'title' => get_field('locations_section_title'),
+            'locations'  => []
+        ];
+
+        $locations = get_field('locations_list');
+
+        foreach($locations as $location) {
+            $location = $location['location'];
+
+            $location_info = [
+                'name' => $location->post_title,
+                'slug' => $location->post_name,
+                'address' => get_field('location_address', $location->ID),
+                'lat' => get_field('location_lat', $location->ID),
+                'long' => get_field('location_long', $location->ID),
+                'hours' => get_field('location_hours', $location->ID),
+                'gallery_images' => get_field('location_gallery', $location->ID),
+            ];
+
+            // echo'<pre>'; print_r($location_info); echo'</pre>';
+            // exit;
+
+            array_push($section_data['locations'], $location_info);
+        }
+
+        return $section_data;
     }
 }

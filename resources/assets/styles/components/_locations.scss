@@ -1,0 +1,98 @@
+/**
+ * Maps
+ */
+
+.locations {
+  position: relative;
+  margin-top: 8.8rem;
+  margin-bottom: 7.2rem;
+  min-height: 60rem;
+
+  .title {
+    position: relative;
+    top: 5.6rem;
+    z-index: 2;
+  }
+
+  #map {
+    position: absolute !important; // need important to beat Google default style
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    min-height: inherit;
+  }
+
+  .address,
+  .day,
+  .time {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .day,
+  .time {
+    margin-bottom: 0.4rem;
+  }
+
+  .day { width: 40%; }
+  .time { width: 60%; }
+
+  .location-list { display: none; }
+
+  .gm-ui-hover-effect { display: none !important; }
+
+  .location {
+    margin-top: 3.2rem;
+    margin-bottom: 0;
+  }
+
+  .info {
+    padding: 0.8rem !important;
+    background: theme-color("white");
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.18);
+  }
+
+  .gm-style .gm-style-iw-c {
+    border-radius: 0 !important;
+  }
+
+  .gm-style .gm-style-iw-t::after {
+    display: none !important;
+  }
+
+  .close { display: none; }
+
+  @include mq_min(461px) {
+    .location-list {
+      top: 13rem;
+    }
+  }
+
+  @include mq_min(768px) {
+    .day { width: 30%; }
+    .time { width: 70%; }
+
+    .location .info {
+      position: relative;
+      padding: 2.4rem 4rem 2.4rem 3.2rem;
+    }
+
+    .close {
+      display: block;
+      position: absolute;
+      top: 0.8rem;
+      right: 1.6rem;
+      transform: skew(0);
+    }
+
+    .location-list { position: static; }
+
+    .location {
+      position: absolute;
+      z-index: 3;
+      right: -200%;
+      min-width: 72rem;
+    }
+  }
+}

@@ -5,6 +5,7 @@
 .slider-section {
   position: relative;
   min-height: 64rem;
+  margin-bottom: 12rem;
 
   .title,
   .name,
@@ -21,6 +22,7 @@
     top: 0;
     left: 0;
     min-height: inherit;
+    margin-bottom: 0;
   }
 
   .slider {
@@ -63,6 +65,8 @@
 
   .slick-dots {
     bottom: 1.8rem;
+
+    li button { transform: skew(0); }
 
     li button::before {
       font-size: 1rem;
