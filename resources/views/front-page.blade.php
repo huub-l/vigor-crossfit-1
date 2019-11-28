@@ -15,4 +15,10 @@
 
   {{-- Locations --}}
   @include('partials.locations', ['content' => FrontPage::locations()])
+  
+  {{-- Shop --}}
+  @include('partials.featured-products', ['shop' => FrontPage::shop()])
+
+  {{-- Subscribe --}}
+  @include('partials.newsletter-subscription', ['content' => FrontPage::subscribe()])
 @endsection

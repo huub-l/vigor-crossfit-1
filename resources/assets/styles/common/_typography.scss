@@ -96,6 +96,7 @@ a {
   transition: all 0.3s ease;
 
   &:hover {
+    text-decoration: none;
     color: darken(theme-color("yellow"), 5%);
     transition: all 0.3s ease;
   }

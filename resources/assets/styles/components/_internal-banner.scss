@@ -1,0 +1,16 @@
+/**
+ * Internal Banner
+ */
+
+.internal-banner {
+  @include bg_default;
+
+  min-height: 32rem;
+  padding-top: 14rem;
+  margin-bottom: 4rem;
+
+  .title {
+    letter-spacing: 0;
+    color: theme-color("white");
+  }
+}

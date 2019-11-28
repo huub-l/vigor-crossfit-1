@@ -116,12 +116,38 @@ class FrontPage extends Controller
                 'gallery_images' => get_field('location_gallery', $location->ID),
             ];
 
-            // echo'<pre>'; print_r($location_info); echo'</pre>';
-            // exit;
-
             array_push($section_data['locations'], $location_info);
         }
 
         return $section_data;
+    }
+
+    /**
+     * Shop section content
+     *
+     * @return array
+     */
+    public static function shop()
+    {
+        $shop_section = [
+            'title' => get_field('shop_section_title'),
+            'excerpt' => get_field('shop_section_excerpt'),
+            'cta' => get_field('shop_section_cta_button'),
+            'products' => get_field('shop_section_products')
+        ];
+
+        return $shop_section;
+    }
+
+    public static function subscribe()
+    {
+        $subscribe_section = [
+            'title' => get_field('subscribe_section_title'),
+            'excerpt' => get_field('subscribe_section_excerpt'),
+            'after_form' => get_field('subscribe_section_after_form_content'),
+            'coupon' => get_field('subscribe_section_coupon'),
+        ];
+
+        return $subscribe_section;
     }
 }

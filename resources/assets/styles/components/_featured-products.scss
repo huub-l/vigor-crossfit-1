@@ -1,0 +1,132 @@
+/**
+ * Featured Products
+ *
+ * Any attributes with !important is to override default
+ * woocommerce styles
+ */
+
+.shop-featured {
+  margin-bottom: 1.6rem;
+
+  .intro { margin-bottom: 2.4rem; }
+  .excerpt { margin-bottom: 0; }
+
+  .cta {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+  }
+
+  .woocommerce ul.products li.product a img { display: none; }
+
+  .woocommerce ul.products li.product {
+    position: relative;
+    width: 100%;
+    min-height: 32rem;
+    margin-bottom: 2.4rem;
+    float: none;
+  }
+
+  .woocommerce-loop-product__link {
+    @include bg-default;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: inherit;
+    padding-left: 1.6rem;
+    margin-bottom: 0;
+
+    &:hover { cursor: default; }
+  }
+
+  .woocommerce-loop-product__title,
+  .woocommerce-Price-amount {
+    color: theme-color("white");
+  }
+
+  .woocommerce-loop-product__title {
+    padding-bottom: 0 !important;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-family: $font-medium;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-bottom: -0.4rem;
+  }
+
+  .woocommerce-Price-amount {
+    font-size: 1.6rem;
+    font-family: $font-bold;
+  }
+
+  .woocommerce a.added_to_cart {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .woocommerce ul.products li.product .button { padding-top: 1.3rem; }
+
+  .woocommerce a.added_to_cart,
+  .woocommerce ul.products li.product .button {
+    position: absolute;
+    bottom: 2.4rem;
+    right: 1.6rem;
+    min-width: 8rem;
+    min-height: 3.6rem;
+    border-radius: 0;
+    margin-top: 0;
+    font-size: 1.12rem;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: theme-color("yellow");
+    color: theme-color("black");
+    transform: translateY(0) skewX(-10deg);
+
+    &.added { display: none; }
+
+    &:hover {
+      transform: translateY(-4%) skewX(-10deg);
+      color: darken(theme-color("black"), 2%);
+      border-color: darken(theme-color("yellow"), 2%);
+      background-color: darken(theme-color("yellow"), 2%);
+    }
+
+    &.loading::after {
+      top: 1.3rem;
+    }
+  }
+
+  @include mq_min(768px) {
+    margin-bottom: 2.4rem;
+
+    .woocommerce ul.products {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .woocommerce ul.products li.product { width: 49%; }
+  }
+
+  @include mq_min(992px) {
+    margin-bottom: 3.2rem;
+
+    .excerpt {
+      margin-top: 5rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .woocommerce ul.products li.product { min-height: 40rem; }
+    .woocommerce-loop-product__title { font-size: 1.8rem !important; }
+
+    .woocommerce-Price-amount {
+      display: block;
+      margin-top: -0.4rem;
+      margin-bottom: 0;
+      font-size: 1.4rem;
+    }
+  }
+}

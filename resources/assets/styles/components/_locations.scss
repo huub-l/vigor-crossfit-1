@@ -5,7 +5,7 @@
 .locations {
   position: relative;
   margin-top: 8.8rem;
-  margin-bottom: 7.2rem;
+  margin-bottom: 5.6rem;
   min-height: 60rem;
 
   .title {
@@ -70,6 +70,8 @@
   }
 
   @include mq_min(768px) {
+    margin-bottom: 8rem;
+
     .day { width: 30%; }
     .time { width: 70%; }
 

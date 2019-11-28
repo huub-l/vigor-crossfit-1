@@ -1,8 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-  @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header')
-    @include('partials.content-page')
-  @endwhile
+  @include('partials.page-header')
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        @while(have_posts()) @php the_post() @endphp
+          @include('partials.content-page')
+        @endwhile
+      </div>
+    </div>
+  </div>
 @endsection
