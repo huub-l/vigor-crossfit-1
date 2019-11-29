@@ -1,4 +1,4 @@
-# [Sage](https://roots.io/sage/)
+# Vigor Crossfit - Sage
 
 WordPress theme build using Sage. Sage is a WordPress starter theme with a modern development workflow.
 
