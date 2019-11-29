@@ -8,7 +8,7 @@
   background-color: theme-color("black");
 
   .logo img {
-    max-width: 18rem;
+    max-width: 14rem;
     margin-right: auto;
     margin-bottom: 3.2rem;
     margin-left: auto;
@@ -68,5 +68,9 @@
     .info-list-item-content {
       text-align: left;
     }
+  }
+
+  @include mq_min(992px) {
+    .logo img { max-width: 18rem; }
   }
 }

@@ -74,6 +74,38 @@
     }
   }
 
+  .slick-arrow {
+    z-index: 20;
+    opacity: 0.5;
+    transform: translateY(0) skewX(0);
+    transition: opacity 0.4s ease;
+
+    &:hover {
+      transform: translateY(0) skewX(0);
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+  }
+
+  @include mq_min(768px) {
+    .slick-prev { left: 12rem; }
+    .slick-next { right: 12rem; }
+
+    .slick-prev::before { background-image: url("../images/left-arrow.svg"); }
+    .slick-next::before { background-image: url("../images/right-arrow.svg"); }
+
+    .slick-prev::before,
+    .slick-next::before {
+      @include bg_default;
+
+      display: block;
+      width: 2.8rem;
+      height: 6rem;
+      background-size: 80%;
+      content: "";
+    }
+  }
+
   @include mq_min(992px) {
     min-height: 72rem;
 

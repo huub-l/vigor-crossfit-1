@@ -1,5 +1,7 @@
 /**
  * Maps
+ *
+ * Any important flags are Google Maps override
  */
 
 .locations {
@@ -15,7 +17,7 @@
   }
 
   #map {
-    position: absolute !important; // need important to beat Google default style
+    position: absolute !important;
     top: 0;
     left: 0;
     width: 100%;
@@ -29,6 +31,8 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
+
+  .address { max-width: 32ch; }
 
   .day,
   .time {
@@ -48,7 +52,7 @@
   }
 
   .info {
-    padding: 0.8rem !important;
+    padding: 0.8rem 1.6rem !important;
     background: theme-color("white");
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.18);
   }

@@ -25,7 +25,9 @@ export default {
         if( emailIsValid(email_field.value) ) {
           // Fade Out Form
           $('#subscribe-form').fadeOut();
+          $('.error').fadeOut();
 
+          // Fake send
           setTimeout(() => {
             $('.loading-container').fadeIn();
           }, 400)
@@ -38,6 +40,8 @@ export default {
           setTimeout(() => {
             $('.success').fadeIn();
           }, 2000)
+        } else {
+          $('.error').fadeIn();
         }
       })
     }

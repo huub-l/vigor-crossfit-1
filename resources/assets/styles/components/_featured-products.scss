@@ -61,14 +61,6 @@
     font-family: $font-bold;
   }
 
-  .woocommerce a.added_to_cart {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-
-  .woocommerce ul.products li.product .button { padding-top: 1.3rem; }
-
   .woocommerce a.added_to_cart,
   .woocommerce ul.products li.product .button {
     position: absolute;
@@ -76,7 +68,50 @@
     right: 1.6rem;
     min-width: 8rem;
     min-height: 3.6rem;
+  }
+
+  .woocommerce a.added_to_cart {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    transform: translateY(0);
+    transition: all 0.4s ease;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      transform: translateY(0) skewX(-10deg);
+      background-color: theme-color("yellow");
+      content: "";
+    }
+
+    &::after {
+      font-size: 1.2rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: theme-color("black");
+      background-color: transparent;
+      content: "View Cart";
+    }
+
+    &:hover {
+      transform: translateY(-4%);
+
+      &::before { background-color: darken(theme-color("yellow"), 2%); }
+    }
+  }
+
+  .woocommerce ul.products li.product .button {
     border-radius: 0;
+    padding-top: 1.3rem;
     margin-top: 0;
     font-size: 1.12rem;
     text-align: center;
@@ -84,6 +119,18 @@
     background-color: theme-color("yellow");
     color: theme-color("black");
     transform: translateY(0) skewX(-10deg);
+    backface-visibility: hidden;
+
+    .text {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: 0;
+      transform: skewX(10deg);
+    }
 
     &.added { display: none; }
 
@@ -120,7 +167,7 @@
     }
 
     .woocommerce ul.products li.product { min-height: 40rem; }
-    .woocommerce-loop-product__title { font-size: 1.8rem !important; }
+    .woocommerce-loop-product__title { font-size: 1.75rem !important; }
 
     .woocommerce-Price-amount {
       display: block;

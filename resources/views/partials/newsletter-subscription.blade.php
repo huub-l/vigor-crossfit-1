@@ -9,11 +9,13 @@
           <div class="form-group mb-2 email">
             <label for="inputPassword2" class="sr-only">Password</label>
             <input type="email" class="form-control" id="email" placeholder="name@email.com" required>
-          </div>
+          </div>  
           <button type="submit" class="btn btn-secondary mb-2 -light">
             <span class="text">Subscribe</span>
           </button>
         </form>
+
+        <p class="error text-center">Please enter a valid email address.</p>
 
         <div class="loading-container">
           <p class="loading text-center">Loading...</p>

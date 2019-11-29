@@ -36,22 +36,13 @@
     width: 54%;
     background-color: theme-color("white");
     transform: translateY(0) skewX(-10deg);
+  }
 
-    .error {
-      display: none;
-      margin-bottom: 0;
-      color: red; // Not a part of theme colors
-      font-size: 1.6rem;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-
-      &.-show { display: block; }
-
-      &.-fade {
-        opacity: 1;
-        transition: opacity 0.4s ease;
-      }
-    }
+  .error {
+    display: none;
+    margin-bottom: 0;
+    color: red; // Not a part of theme colors
+    font-size: 1.6rem;
   }
 
   .loading-container,
