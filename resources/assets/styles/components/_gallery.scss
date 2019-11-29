@@ -19,7 +19,7 @@
       display: none;
       position: absolute;
       top: 23%;
-      left: 22%;
+      left: 20%;
       margin-bottom: 0;
       font-size: 1.4rem;
       font-family: $font-bold;
@@ -34,8 +34,8 @@
 
   @include mq_min(768px) {
     .gallery-link {
-      width: 8rem;
-      height: 8rem;
+      width: 7rem;
+      height: 7rem;
 
       .count { display: block; }
     }
